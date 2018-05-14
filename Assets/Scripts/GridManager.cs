@@ -22,11 +22,18 @@ public class GridManager : MonoBehaviour {
     private float timer;
     public float timerStart;
 
+    private int xNumTiles = 10;
+    private int yNumTiles = 6;
+    private int totalTiles;
+    public Text totalTilesText;
+
     void Start() {
         gridManager = GameObject.FindGameObjectWithTag("GameController");
         timer = timerStart;
         timerLabel.text = timer.ToString();
-        CreateGame(10,6);
+        CreateGame(xNumTiles,yNumTiles);
+        totalTiles = xNumTiles * yNumTiles;
+        totalTilesText.text = totalTiles.ToString();
     }
 
 
@@ -111,18 +118,25 @@ public class GridManager : MonoBehaviour {
 
 
     IEnumerator KillTiles() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         foreach (Transform child in transform) {
             if (child.GetComponent<TileController>().isFlipped == true) {
                 Destroy(child.gameObject);
+                totalTiles--;
+                totalTilesText.text = totalTiles.ToString();
             }
         }
+
+        if (totalTiles <= 0) {
+            SceneManager.LoadScene("Win");
+        }
+
     }
 
 
     IEnumerator ResetTiles() {
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         foreach (Transform child in transform) {
             if (child.gameObject.GetComponent<TileController>().isFlipped == true) {
