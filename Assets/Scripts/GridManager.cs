@@ -26,6 +26,7 @@ public class GridManager : MonoBehaviour {
     private int yNumTiles = 6;
     private int totalTiles;
     public Text totalTilesText;
+    private AudioSource blupe;
 
     void Start() {
         gridManager = GameObject.FindGameObjectWithTag("GameController");
@@ -34,6 +35,7 @@ public class GridManager : MonoBehaviour {
         CreateGame(xNumTiles,yNumTiles);
         totalTiles = xNumTiles * yNumTiles;
         totalTilesText.text = totalTiles.ToString();
+        blupe = GetComponent<AudioSource>();
     }
 
 
@@ -109,6 +111,8 @@ public class GridManager : MonoBehaviour {
                 }
             }
             StartCoroutine("KillTiles");
+        } else {
+            blupe.Play();
         }
 
         // reset tiles
@@ -144,6 +148,7 @@ public class GridManager : MonoBehaviour {
                 child.gameObject.GetComponent<SpriteRenderer>().sprite = child.gameObject.GetComponent<TileController>().tile.tileBack;
             }
         }
+
 
         tile1Flipped = false;
     }
