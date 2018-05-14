@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{F1D512B5-AFF4-2F38-4A26-DD461CA80E35}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LoadSplash.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MusicManager.cs">
     <Files>
       <File FileName="Assets/Scripts/Tile.cs" Line="11" Column="27" />
-      <File FileName="Assets/Scripts/GridManager.cs" Line="131" Column="43" />
-      <File FileName="Assets/Scripts/TileController.cs" Line="23" Column="69" />
+      <File FileName="Assets/Scripts/GridManager.cs" Line="115" Column="26" />
+      <File FileName="Assets/Scripts/TileController.cs" Line="25" Column="22" />
       <File FileName="Assets/Scripts/LoadLevel.cs" Line="9" Column="41" />
-      <File FileName="Assets/Scripts/LoadSplash.cs" Line="14" Column="42" />
+      <File FileName="Assets/Scripts/LoadSplash.cs" Line="15" Column="37" />
+      <File FileName="Assets/Scripts/MusicManager.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
