@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GridManager : MonoBehaviour {
 
@@ -16,10 +18,24 @@ public class GridManager : MonoBehaviour {
     public string tile1Name;
     public string tile2Name;
 
+    public Text timerLabel;
+    private float timer;
+    public float timerStart;
+
     void Start() {
         gridManager = GameObject.FindGameObjectWithTag("GameController");
-
+        timer = timerStart;
+        timerLabel.text = timer.ToString();
         CreateGame(10,6);
+    }
+
+
+    void Update() {
+        timer -= Time.deltaTime;
+        timerLabel.text = timer.ToString("N0");
+        if (timer <= 0) {
+            SceneManager.LoadScene("Lose");
+        }
     }
 
     void CreateGame(int xTiles, int yTiles) {
@@ -66,11 +82,9 @@ public class GridManager : MonoBehaviour {
                 GameObject thisTile = (GameObject)Instantiate(tilePrefab, new Vector3(x, y, 0), Quaternion.identity);
                 thisTile.transform.SetParent(gridManager.transform);
 
-
                 // Send the tile data over
                 int finalOutputSlot = tileSetFinal[createSlot];
                 thisTile.GetComponent<TileController>().tile = tiles[finalOutputSlot];
-
                 createSlot++;
             }
         }
@@ -118,7 +132,6 @@ public class GridManager : MonoBehaviour {
         }
 
         tile1Flipped = false;
-        tile2Flipped = false;
     }
 
 

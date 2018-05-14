@@ -19,12 +19,13 @@ public class TileController : MonoBehaviour {
     void OnMouseDown() {
         isFlipped = true;
         GetComponent<SpriteRenderer>().sprite = tile.tileFront;
+
+        // Flip the tile and check for match if its the second tile.
         if (gridManager.tile1Flipped == false) {
             gridManager.tile1Flipped = true;
             gridManager.tile1Name = tileName;
         } else {
             // Tile 1 is already flipped, flip 2 and check for a match.
-            gridManager.tile2Flipped = true;
             gridManager.tile2Name = tileName;
             gridManager.CheckForMatch();
         }
