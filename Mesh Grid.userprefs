@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{F1D512B5-AFF4-2F38-4A26-DD461CA80E35}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Tile.cs" Line="8" Column="26" />
+      <File FileName="Assets/Scripts/GridManager.cs" Line="65" Column="21" />
+      <File FileName="Assets/Scripts/TileController.cs" Line="7" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Mesh_220Grid PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>

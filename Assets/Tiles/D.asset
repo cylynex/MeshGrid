@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9aea1ce79b4490fad848aaef83b6aa, type: 3}
+  m_Name: D
+  m_EditorClassIdentifier: 
+  tileData: {fileID: 0}
+  tileID: 0
+  tileName: D
+  tileFront: {fileID: 21300006, guid: 55ca2548dc10143d2b4686e1018b322d, type: 3}
+  tileBack: {fileID: 21300022, guid: 55ca2548dc10143d2b4686e1018b322d, type: 3}
